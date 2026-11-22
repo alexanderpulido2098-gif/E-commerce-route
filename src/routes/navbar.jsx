@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
 
-function Navbar() {
+function NavbarEco() {
 
 
     return (
@@ -10,4 +10,4 @@ function Navbar() {
             <NavLink to="/Prodotti">Prodotti</NavLink>
         </header>
     );
-}
+} export default NavbarEco
