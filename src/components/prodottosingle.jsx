@@ -1,42 +1,53 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
+import RenderCard from "../props/Rendercard";
+import NavbarEco from "./navbar";
 
 
 
-useEffect(ProdottoSingle, [])
 
 function ProdottoSingle() {
 
-    const [prodotto, setProdotto] = useState([]); //questo state mi serve per renderizare le card cambiando il suo set con la chiamata fetch
+    const [prodotto, setProdotto] = useState(null); //questo state mi serve per renderizare le card cambiando il suo set con la chiamata fetch
     const { id } = useParams();
     const navigate = useNavigate();
     const url = `https://fakestoreapi.com/products/${id}`
     // **************************
+    useEffect(() => {
+        fetch(url)
+            .then((res) => res.json())
 
-    fetch(url)
-        .then((res) => res.json())
+            .then((dati) => {
+                console.log(dati)
+                setProdotto(dati);
+            })
 
-        .then((dati) => {
-            console.log(dati)
-            setProdotto(dati);
-        })
-
-        .catch(error => {
-            console.error("qualcosa è andato storto");
-            navigate("/prodotto");
-        });
-
-
+            .catch(error => {
+                console.error("qualcosa è andato storto");
+                navigate("/prodotto");
+            });
+    }, [id]);
+    //******FEEDBACK finche caricano i dati  ******+ */
+    if (!prodotto) {
+        return (
+            <div>
+                <NavbarEco />
+                <p>Caricamento in corso...</p>
+            </div>
+        );
+    }
 
     return (
         <div>
             <NavbarEco />
             <h1>Prodotto</h1>
-            <p>prodotto con id:${id}</p>
+            <p>Prodotto con id: {id}</p>
             <div className="Container-cards">
-                {prodotto.map((prodotto) => (
-                    <RenderCard key={prodotto.id} nome={prodotto.title} img={prodotto.image} prezzo={prodotto.price} />
-                ))}
+                <RenderCard
+                    nome={prodotto.title}
+                    img={prodotto.image}
+                    prezzo={prodotto.price}
+                />
             </div>
         </div>
     )

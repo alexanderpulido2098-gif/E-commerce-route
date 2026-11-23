@@ -1,5 +1,6 @@
 import NavbarEco from "./navbar";
 import { useState, useEffect, } from "react";
+import { Link } from "react-router";
 import RenderCard from "../props/Rendercard";
 
 
@@ -33,7 +34,8 @@ function Prodotti() {
             <p>I Nostri prodotti</p>
             <div className="Container-cards">
                 {prodotti.map((prodotto) => (
-                    <RenderCard key={prodotto.id} nome={prodotto.title} img={prodotto.image} prezzo={prodotto.price} />
+                    <Link key={prodotto.id} to={`/Prodotto/${prodotto.id}`}> <RenderCard nome={prodotto.title} img={prodotto.image} prezzo={prodotto.price} />
+                    </Link>
                 ))}
             </div>
         </div>

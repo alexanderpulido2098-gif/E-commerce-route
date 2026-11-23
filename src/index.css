@@ -16,7 +16,6 @@
     position: absolute;
     top: 80%;
     transform: translate(300%, -50%);
-    background-color: rgb(233, 104, 57);
     color: white;
     padding: 12px 24px;
     text-decoration: none;
@@ -43,7 +42,7 @@ a {
 
 a.active {
     font-weight: 700;
-    color: rgb(233, 104, 57);
+    color: black;
 }
 
 header {
@@ -57,11 +56,10 @@ header {
 .Container-cards {
     position: relative;
     display: flex;
-    flex-wrap: wrap;
-    background-color: rgb(233, 104, 57);
     justify-content: center;
-    margin-top: 30px;
-
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 
 }
 
@@ -69,13 +67,22 @@ header {
 .card {
     width: 160px;
     height: 250px;
+    background-color: rgb(233, 104, 57);
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
 
 }
 
 .card-img {
     max-width: 78%;
     height: 63%;
-
+    object-fit: cover;
 }
 
 .card-title-prezzo {
