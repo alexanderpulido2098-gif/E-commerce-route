@@ -4,7 +4,7 @@ import RenderCard from "../props/Rendercard";
 
 
 
-function ProdottiPage() {
+function Prodotti() {
     // ********************
 
     const [prodotti, setProdotti] = useState([]); //questo state mi serve per renderizare le card cambiando il suo set con la chiamata fetch
@@ -38,4 +38,4 @@ function ProdottiPage() {
             </div>
         </div>
     )
-} export default ProdottiPage
+} export default Prodotti
