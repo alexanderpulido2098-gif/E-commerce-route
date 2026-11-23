@@ -1,12 +1,16 @@
 import NavbarEco from "../components/navbar";
+import Gif1 from "../assets/Gif1.gif";
+
 
 function HomePage() {
     return (
-        <div>
+        <div className="Home-container" style={{ backgroundImage: `url(${Gif1})` }}>
             <NavbarEco />
-            <h1>Home</h1>
-            <p>Benvenuti nella home ecommerce</p>
-        </div>
-    )
 
+            {/* 👇 Contenuto centrale separato dalla Navbar */}
+            <div className="Home-content">
+                <p>Benvenuti nella home ecommerce</p>
+            </div>
+        </div>
+    );
 } export default HomePage
