@@ -1,4 +1,4 @@
-import NavbarEco from "../routes/navbar";
+import NavbarEco from "../components/navbar";
 
 function HomePage() {
     return (

@@ -1,12 +1,13 @@
-import NavbarEco from "../routes/navbar";
-import { useState, useEffect, useParams, useNavigate } from "react";
-import RenderCard from "../props/Rendercard";
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router";
 
-useEffect(ProdottiPage, []);
 
-function ProdottiPage() {
-    // ********************
-    const [prodotti, setProdotti] = useState([]); //questo state mi serve per renderizare le card cambiando il suo set con la chiamata fetch
+
+useEffect(ProdottoSingle, [])
+
+function ProdottoSingle() {
+
+    const [prodotto, setProdotto] = useState([]); //questo state mi serve per renderizare le card cambiando il suo set con la chiamata fetch
     const { id } = useParams();
     const navigate = useNavigate();
     const url = `https://fakestoreapi.com/products/${id}`
@@ -17,29 +18,30 @@ function ProdottiPage() {
 
         .then((dati) => {
             console.log(dati)
-            setProdotti(dati);
+            setProdotto(dati);
         })
 
         .catch(error => {
             console.error("qualcosa è andato storto");
-            navigate("/prodotti");
+            navigate("/prodotto");
         });
-
-
-
 
 
 
     return (
         <div>
             <NavbarEco />
-            <h1>Prodotti</h1>
-            <p>I Nostri prodotti</p>
+            <h1>Prodotto</h1>
+            <p>prodotto con id:${id}</p>
             <div className="Container-cards">
-                {prodotti.map((prodotto) => (
+                {prodotto.map((prodotto) => (
                     <RenderCard key={prodotto.id} nome={prodotto.title} img={prodotto.image} prezzo={prodotto.price} />
                 ))}
             </div>
         </div>
     )
-} export default ProdottiPage
+
+
+
+}
+export default ProdottoSingle
