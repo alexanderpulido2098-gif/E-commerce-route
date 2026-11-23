@@ -2,25 +2,32 @@ import NavbarEco from "../routes/navbar";
 import { useState, useEffect, useParams, useNavigate } from "react";
 import RenderCard from "../props/Rendercard";
 
+useEffect(ProdottiPage, []);
 
 function ProdottiPage() {
+    // ********************
+    const [prodotti, setProdotti] = useState([]); //questo state mi serve per renderizare le card cambiando il suo set con la chiamata fetch
+    const { id } = useParams();
+    const navigate = useNavigate();
+    const url = `https://fakestoreapi.com/products/${id}`
+    // **************************
 
-    const [prodotti, setProdotti] = useState([]);
-    // const { id } = useParams();
+    fetch(url)
+        .then((res) => res.json())
 
-    // const navigate = useNavigate();
+        .then((dati) => {
+            console.log(dati)
+            setProdotti(dati);
+        })
+
+        .catch(error => {
+            console.error("qualcosa è andato storto");
+            navigate("/prodotti");
+        });
 
 
-    useEffect(() => {
-        fetch("https://fakestoreapi.com/products/${id}")
-            .then((res) => res.json())
-            .then((dati) => {
-                console.log(dati)
-                setProdotti(dati);
 
-            });
 
-    }, []);
 
 
     return (
