@@ -22,9 +22,9 @@ function ProdottoSingle() {
                 setProdotto(dati);
             })
 
-            .catch(error => {
-                console.error("qualcosa è andato storto");
-                navigate("/prodotto");
+            .catch((error) => {
+                console.error("Qualcosa è andato storto:", error);
+                navigate("/Prodotti");
             });
     }, [id]);
     //******FEEDBACK finche caricano i dati  ******+ */
