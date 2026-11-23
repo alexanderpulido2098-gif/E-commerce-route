@@ -7,7 +7,7 @@ function NotFoundPage() {
     return (
         <div className="paginaNF" >
             <img className="imgNF" src={foto1} alt="error404" />
-            <Link to="/">Torna alla home</Link>
+            <Link className="tornaNF" to="/">Torna alla home</Link>
         </div>
     )
 

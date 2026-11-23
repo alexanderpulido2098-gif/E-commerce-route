@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Pagina non trovata */
+.paginaNF {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.tornaNF {
+    position: absolute;
+    top: 80%;
+    transform: translate(300%, -50%);
+    background-color: rgb(233, 104, 57);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.imgNF {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/**********header************/
+
+a {
+    color: rgb(233, 104, 57);
+    text-decoration: none;
+
+    &:hover {
+        color: orange;
+    }
+}
+
+a.active {
+    font-weight: 700;
+    color: rgb(233, 104, 57);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* *************++ cards Prodotti ************* */
+.Container-cards {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(233, 104, 57);
+    justify-content: center;
+    margin-top: 30px;
+
+
+}
+
+
+.card {
+    width: 160px;
+    height: 250px;
+
+}
+
+.card-img {
+    max-width: 78%;
+    height: 63%;
+
+}
+
+.card-title-prezzo {
+
+    color: azure;
+    font-size: 0.6rem;
+}
