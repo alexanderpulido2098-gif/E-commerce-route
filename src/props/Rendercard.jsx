@@ -8,12 +8,12 @@ export default function RenderCard(props) {
     const valueprezzo = props.prezzo
 
 
-    return <div className="card" >
+    return (<div className="card" >
         <img className="card-img" src={imgcard} alt={nomecard} />
         <div className="card-content">
             <h3 className="card-title-prezzo">{nomecard}</h3>
             <p className="card-title-prezzo">{valueprezzo}</p>
         </div>
-    </div>
+    </div>)
 
 }

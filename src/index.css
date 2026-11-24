@@ -126,3 +126,43 @@ p.card-title-prezzo {
     color: azure;
     font-size: 1rem;
 }
+
+/*************+ ABOUT******** */
+
+.chi-siamo-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.cards-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.info-card {
+    background-color: rgb(233, 104, 57);
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 25px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+    /* Stato iniziale: invisibile */
+    opacity: 0;
+    transform: translateY(20px);
+
+    /* Applica l'animazione e mantiene lo stato finale (forwards) */
+    animation: appareInSequenza 0.6s ease-out forwards;
+}
+
+@keyframes appareInSequenza {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
