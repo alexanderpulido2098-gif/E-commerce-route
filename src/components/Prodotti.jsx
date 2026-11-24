@@ -34,7 +34,7 @@ function Prodotti() {
             <p>I Nostri prodotti</p>
             <div className="Container-cards">
                 {prodotti.map((prodotto) => (
-                    <Link key={prodotto.id} to={`/Prodotto/${prodotto.id}`}> <RenderCard nome={prodotto.title} img={prodotto.image} prezzo={prodotto.price} />
+                    <Link key={prodotto.id} to={`/Prodotto/${prodotto.id}`}> <RenderCard nome={prodotto.title} img={prodotto.image} prezzo={`${prodotto.price}€`} />
                     </Link>
                 ))}
             </div>
