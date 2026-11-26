@@ -24,3 +24,37 @@ export const infoAzienda = [
         descrizione: "Utilizziamo solo imballaggi 100% riciclabili e compensiamo le emissioni di CO2 di ogni singola consegna."
     }
 ];
+
+export const SocialLinks = [
+    {
+        id: 1,
+        name: 'Facebook',
+        url: 'https://facebook.com',
+        image: './footer-facebook.png'
+    },
+    {
+        id: 2,
+        name: 'periscope',
+        url: 'https://periscope.com',
+        image: './footer-periscope.png'
+    },
+    {
+        id: 3,
+        name: 'twitter',
+        url: 'https://twitter.com',
+        image: './footer-twitter.png'
+    },
+    {
+        id: 4,
+        name: 'YouTube',
+        url: 'https://youtube.com',
+        image: './footer-youtube.png'
+    },
+    {
+        id: 5,
+        name: 'Pinterest',
+        url: 'https://pinterest.com',
+        image: './footer-pinterest.png'
+    },
+];
+

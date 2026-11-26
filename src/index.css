@@ -166,3 +166,38 @@ p.card-title-prezzo {
         transform: translateY(0);
     }
 }
+
+/* ///FOOTER  */
+
+.calltoaction {
+    display: flex;
+    align-items: center;
+    height: 85px;
+    gap: 2rem;
+    background-color: azure;
+    justify-content: center;
+    gap: 27rem;
+
+}
+
+.btnfooter {
+    padding: 10px;
+    background-color: rgb(233, 104, 57);
+    color: azure;
+    border-color: rgb(233, 104, 57);
+
+
+}
+
+.follow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: rgb(233, 104, 57);
+}
+
+.copyR {
+
+    color: rgb(233, 104, 57);
+    background-color: azure;
+}
