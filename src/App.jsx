@@ -1,6 +1,6 @@
-
 import { BrowserRouter, Routes, Route } from "react-router";
 import LayoutCLasic from "../layouts/layoutclasic";
+
 
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/Aboutpage";
@@ -8,11 +8,7 @@ import ProdottiPage from "./components/Prodotti";
 import NotFoundPage from "./pages/Notfoundpage";
 import ProdottoSingle from "./components/prodottosingle";
 
-
-
 function App() {
-
-
   return (
     <BrowserRouter>
       <Routes>
@@ -25,11 +21,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-
-
-  )
-
-
+  );
 }
 
-export default App
+export default App;
