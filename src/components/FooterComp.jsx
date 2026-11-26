@@ -8,7 +8,7 @@ function FooterApp() {
 
     const social = SocialLinks.map(elemento => {
         return (<div className="social-element" key={elemento.id}>
-            <img className="social-img" src={elemento.image} alt={elemento.text} />
+            <img className="social-img" src={elemento.image} alt={elemento.name} />
         </div>)
     })
 

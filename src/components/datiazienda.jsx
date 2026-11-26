@@ -1,3 +1,9 @@
+import facebookImg from "../assets/footer-facebook.png";
+import periscopeImg from "../assets/footer-periscope.png";
+import twitterImg from "../assets/footer-twitter.png";
+import youtubeImg from "../assets/footer-youtube.png";
+import pinterestImg from "../assets/footer-pinterest.png";
+
 export const infoAzienda = [
     {
         titolo: "Chi Siamo",
@@ -24,37 +30,36 @@ export const infoAzienda = [
         descrizione: "Utilizziamo solo imballaggi 100% riciclabili e compensiamo le emissioni di CO2 di ogni singola consegna."
     }
 ];
-
 export const SocialLinks = [
     {
         id: 1,
         name: 'Facebook',
         url: 'https://facebook.com',
-        image: './footer-facebook.png'
+        image: facebookImg
     },
     {
         id: 2,
         name: 'periscope',
         url: 'https://periscope.com',
-        image: './footer-periscope.png'
+        image: periscopeImg
     },
     {
         id: 3,
         name: 'twitter',
         url: 'https://twitter.com',
-        image: './footer-twitter.png'
+        image: twitterImg
     },
     {
         id: 4,
         name: 'YouTube',
         url: 'https://youtube.com',
-        image: './footer-youtube.png'
+        image: youtubeImg
     },
     {
         id: 5,
         name: 'Pinterest',
         url: 'https://pinterest.com',
-        image: './footer-pinterest.png'
+        image: pinterestImg
     },
 ];
 

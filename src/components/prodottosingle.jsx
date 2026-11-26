@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
 import RenderCard from "../props/Rendercard";
-import NavbarEco from "./navbar";
+
 
 
 
@@ -39,7 +39,6 @@ function ProdottoSingle() {
 
     return (
         <div>
-            <NavbarEco />
             <h1>Prodotto</h1>
             <p>Prodotto con id: {id}</p>
             <div className="Container-cards">

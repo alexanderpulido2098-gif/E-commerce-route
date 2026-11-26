@@ -1,4 +1,4 @@
-import NavbarEco from "./navbar";
+
 import { useState, useEffect, } from "react";
 import { Link } from "react-router";
 import RenderCard from "../props/Rendercard";
@@ -29,7 +29,6 @@ function Prodotti() {
 
     return (
         <div>
-            <NavbarEco />
             <h1>Prodotti</h1>
             <p>I Nostri prodotti</p>
             <div className="Container-cards">
