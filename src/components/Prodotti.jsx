@@ -1,12 +1,16 @@
 
-import { useState, useEffect, } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router";
 import RenderCard from "../props/Rendercard";
+
+import priceContext from "../contextPrice";
 
 
 
 function Prodotti() {
     // ********************
+    const datiPrice = useContext(priceContext);
+    console.log(datiPrice);
 
     const [prodotti, setProdotti] = useState([]); //questo state mi serve per renderizare le card cambiando il suo set con la chiamata fetch
 
@@ -25,14 +29,16 @@ function Prodotti() {
             });
     }, []);
 
+    const prodottifiltrati = datiPrice.lowprice ? prodotti.filter(prodotto => prodotto.price <= 30) : prodotti;
 
 
     return (
+
         <div>
             <h1>Prodotti</h1>
             <p>I Nostri prodotti</p>
             <div className="Container-cards">
-                {prodotti.map((prodotto) => (
+                {prodottifiltrati.map((prodotto) => (
                     <Link key={prodotto.id} to={`/Prodotto/${prodotto.id}`}> <RenderCard nome={prodotto.title} img={prodotto.image} prezzo={`${prodotto.price}€`} />
                     </Link>
                 ))}
